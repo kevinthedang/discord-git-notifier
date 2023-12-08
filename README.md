@@ -16,8 +16,15 @@ An alternative to this is to have a trello integration for when:
 * When something has been completed/checked off on a checklist that a card might have
 So it would be a Git/Trello Discord Bot (OR maybe known as a simple Agile Bot, but then I'd have to handle more things too)
 
+Something to consider in terms of accounts and running scripts!!!
+* The Bot is it's own Discord User and Trello Account!
+* When making requests, it will be acting on it's own for listening to boards/workspaces
+    * What might be security risks for this as a Trello account?
+
 ## Resources
 * [Discord Developer Portal](https://discord.com/developers/docs/intro)
+* [Trello REST API Documentation](https://developer.atlassian.com/cloud/trello/rest/api-group-actions/#api-group-actions)
+    * [Trello Power-Ups Reference](https://developer.atlassian.com/cloud/trello/power-ups/)
 * [GitHub REST API Documentation](https://docs.github.com/en/rest)
 
 ## Acknowledgement
