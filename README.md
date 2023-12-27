@@ -25,6 +25,9 @@ Something to consider in terms of accounts and running scripts!!!
     * What might be security risks for this as a Trello account?
 
 ## Resources
+* [NodeJS](https://nodejs.org/en/download/)
+    * This project will use `v18.18.2` so that nodemon will work properly, `v18.19.0` and up does not work for some reason.
+    * Consider using [nvm](https://github.com/nvm-sh/nvm/blob/master/README.md#about) for multiple node versions.
 * [Discord Developer Portal](https://discord.com/developers/docs/intro)
 * [Discord.js Docs](https://discord.js.org/docs/packages/discord.js/main)
 * [Trello REST API Docs](https://developer.atlassian.com/cloud/trello/rest/api-group-actions/#api-group-actions)
@@ -35,3 +38,5 @@ Something to consider in terms of accounts and running scripts!!!
 * [Kevin Dang](https://github.com/kevinthedang)
 
 I found the following to be helpful with current ideas: [gitbot](https://github.com/statch/gitbot)
+
+[discord-git-notifier](https://github.com/kevinthedang/discord-git-notifier) © 2023 by [Kevin Dang](https://github.com/kevinthedang) is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1)
