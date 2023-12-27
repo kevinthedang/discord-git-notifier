@@ -1,0 +1,26 @@
+{
+    "name": "discord-git-notifier",
+    "version": "0.1.0",
+    "description": "Discord Bot that notifies changes on GitHub",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Kevin Dang",
+    "license": "ISC",
+    "dependencies": {
+      "discord.js": "^14.14.1",
+      "dotenv": "^16.3.1"
+    },
+    "devDependencies": {
+      "@types/node": "^20.10.5",
+      "nodemon": "^3.0.2",
+      "ts-node": "^10.9.2",
+      "tsx": "^4.7.0",
+      "typescript": "^5.3.3"
+    },
+    "type": "module",
+    "engines": {
+      "node": ">=16.0.0"
+    }
+  }

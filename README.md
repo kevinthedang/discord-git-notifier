@@ -1,4 +1,7 @@
 # Git Notifier Discord Bot
+Sometimes it's annoying to go on GitHub or ask my friends if they made changes to the codebase. So, I want to create a bot that will notify me if changes are made to a repository so I don't need to ask or check. It would also be cool if the bot displays the diff into a codeblock on discord to see what was added!
+
+## Ideas
 Git discord bot idea to keep simple updates to discord channels on:
 * Commits
 * Merges
@@ -23,9 +26,12 @@ Something to consider in terms of accounts and running scripts!!!
 
 ## Resources
 * [Discord Developer Portal](https://discord.com/developers/docs/intro)
-* [Trello REST API Documentation](https://developer.atlassian.com/cloud/trello/rest/api-group-actions/#api-group-actions)
+* [Discord.js Docs](https://discord.js.org/docs/packages/discord.js/main)
+* [Trello REST API Docs](https://developer.atlassian.com/cloud/trello/rest/api-group-actions/#api-group-actions)
     * [Trello Power-Ups Reference](https://developer.atlassian.com/cloud/trello/power-ups/)
-* [GitHub REST API Documentation](https://docs.github.com/en/rest)
+* [GitHub REST API Docs](https://docs.github.com/en/rest)
 
 ## Acknowledgement
-* I found the following to be helpful with current ideas: [gitbot](https://github.com/statch/gitbot)
+* [Kevin Dang](https://github.com/kevinthedang)
+
+I found the following to be helpful with current ideas: [gitbot](https://github.com/statch/gitbot)
