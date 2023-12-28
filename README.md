@@ -1,4 +1,4 @@
-# Git Notifier Discord Bot
+# Git Notifier Discord Bot [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-darkgreen.svg)](https://creativecommons.org/licenses/by-nc/4.0/) [![Release Badge](https://img.shields.io/github/v/release/kevinthedang/discord-git-notifier?logo=github)](https://github.com/kevinthedang/discord-git-notifier/releases/latest)
 Sometimes it's annoying to go on GitHub or ask my friends if they made changes to the codebase. So, I want to create a bot that will notify me if changes are made to a repository so I don't need to ask or check. It would also be cool if the bot displays the diff into a codeblock on discord to see what was added!
 
 ## Ideas
