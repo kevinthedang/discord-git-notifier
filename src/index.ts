@@ -1,1 +1,1 @@
-console.log("Bot is totally running...")
+import('./client.js')

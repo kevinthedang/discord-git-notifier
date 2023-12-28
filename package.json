@@ -10,8 +10,7 @@
         "build": "tsc",
         "prod": "node .",
         "client": "npm run build && npm run prod",
-        "API": "ollama serve",
-        "start": "concurrently \"npm:API\" \"npm:client\""
+        "start": "concurrently \"npm:client\""
     },
     "author": "Kevin Dang",
     "license": "ISC",

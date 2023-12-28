@@ -3,3 +3,7 @@ node_modules/
 
 # production builds
 dist/
+
+# tokens/creds
+.dev.env
+.env
