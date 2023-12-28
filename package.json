@@ -2,25 +2,34 @@
     "name": "discord-git-notifier",
     "version": "0.1.0",
     "description": "Discord Bot that notifies changes on GitHub",
-    "main": "index.js",
+    "main": "dist/index.js",
+    "exports": "./dist/index.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
+        "dev-tsx": "tsx watch src/index.ts",
+        "dev-mon": "nodemon --config nodemon.json src/index.ts",
+        "build": "tsc",
+        "prod": "node .",
+        "client": "npm run build && npm run prod",
+        "API": "ollama serve",
+        "start": "concurrently \"npm:API\" \"npm:client\""
     },
     "author": "Kevin Dang",
     "license": "ISC",
     "dependencies": {
-      "discord.js": "^14.14.1",
-      "dotenv": "^16.3.1"
+        "axios": "^1.6.3",
+        "concurrently": "^8.2.2",
+        "discord.js": "^14.14.1",
+        "dotenv": "^16.3.1"
     },
     "devDependencies": {
-      "@types/node": "^20.10.5",
-      "nodemon": "^3.0.2",
-      "ts-node": "^10.9.2",
-      "tsx": "^4.7.0",
-      "typescript": "^5.3.3"
+        "@types/node": "^20.10.5",
+        "nodemon": "^3.0.2",
+        "ts-node": "^10.9.2",
+        "tsx": "^4.7.0",
+        "typescript": "^5.3.3"
     },
     "type": "module",
     "engines": {
-      "node": ">=16.0.0"
+        "node": ">=16.0.0"
     }
-  }
+}
