@@ -1,6 +1,6 @@
 {
     "name": "discord-git-notifier",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Discord Bot that notifies changes on GitHub",
     "main": "dist/index.js",
     "exports": "./dist/index.js",
@@ -18,7 +18,8 @@
         "axios": "^1.6.3",
         "concurrently": "^8.2.2",
         "discord.js": "^14.14.1",
-        "dotenv": "^16.3.1"
+        "dotenv": "^16.3.1",
+        "octokit": "^3.1.2"
     },
     "devDependencies": {
         "@types/node": "^20.10.5",
