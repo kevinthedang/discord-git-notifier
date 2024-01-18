@@ -1,5 +1,6 @@
 import { Client, GatewayIntentBits } from 'discord.js'
 import { registerEvents } from './utils/events.js'
+import { registerOctokit } from './utils/octoclient.js'
 import Events from './events/index.js'
 
 // import keys/tokens
@@ -15,6 +16,7 @@ const client = new Client({
 })
 
 registerEvents(client, Events)
+registerOctokit(Keys.octoToken)
 
 // Try to log in the client bot
 client.login(Keys.clientToken)
