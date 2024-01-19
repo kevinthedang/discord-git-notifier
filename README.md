@@ -7,8 +7,9 @@ Git discord bot idea to keep simple updates to discord channels on:
 * Merges
 * Pull Requests
 * Releases
+* Issues
 * Maybe more when I think of them
-I am thinking of either having all messages either link to a channel in a server or just have multiple channels to handle different repositories.
+I am thinking of either having all messages either link to a channel in a server or just have multiple channels (maybe even 1 thread per repository) to handle different repositories.
 
 ## Other Considerations
 Another thing I've considered is handle organizations/issues/etc.  
@@ -29,10 +30,12 @@ Something to consider in terms of accounts and running scripts!!!
     * This project will use `v18.18.2` so that nodemon will work properly, `v18.19.0` and up does not work for some reason.
     * Consider using [nvm](https://github.com/nvm-sh/nvm/blob/master/README.md#about) for multiple node versions.
 * [Discord Developer Portal](https://discord.com/developers/docs/intro)
-* [Discord.js Docs](https://discord.js.org/docs/packages/discord.js/main)
+    * [Discord.js Docs](https://discord.js.org/docs/packages/discord.js/main)
 * [Trello REST API Docs](https://developer.atlassian.com/cloud/trello/rest/api-group-actions/#api-group-actions)
     * [Trello Power-Ups Reference](https://developer.atlassian.com/cloud/trello/power-ups/)
 * [GitHub REST API Docs](https://docs.github.com/en/rest)
+    * [Getting started with the Rest API](https://docs.github.com/en/rest/using-the-rest-api/getting-started-with-the-rest-api?apiVersion=2022-11-28&tool=javascript)
+    * [Octokit.js](https://github.com/octokit/octokit.js/#readme)
 
 ## Acknowledgement
 * [Kevin Dang](https://github.com/kevinthedang)
