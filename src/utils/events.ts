@@ -10,6 +10,7 @@ export type EventKeys = keyof ClientEvents // only wants keys of ClientEvents ob
 export interface EventProps {
     client: Client
     log: LogMethod
+    keys: string
 }
 
 export type EventCallback<T extends EventKeys> = (
@@ -33,7 +34,8 @@ export function event<T extends EventKeys>(
 
 export function registerEvents(
     client: Client, 
-    events: Event[]
+    events: Event[],
+    keys: string 
 ): void {
     for (const { key, callback } of events) {
         client.on(key, (...args) => {
@@ -42,7 +44,7 @@ export function registerEvents(
 
             // Handle errors, callbacks, and logs
             try {
-                callback({ client, log }, ...args)
+                callback({ client, log, keys }, ...args)
             } catch (error) {
                 log('[Uncaught Error]', error)
             }

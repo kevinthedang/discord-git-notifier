@@ -11,7 +11,7 @@ export async function registerOctokit(
         data: { login },
     } = await octokit.rest.users.getAuthenticated()
 
-    console.log(`[Event: octokit login] Hello, ${login}`)
+    console.log(`[Event: octokit setup] Signed in as ${login}`)
 
     return octokit
 }

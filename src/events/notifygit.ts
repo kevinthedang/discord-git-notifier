@@ -1,7 +1,10 @@
+import Keys from "../keys.js"
 import { event, Events } from "../utils/events.js"
 
-export default event(Events.MessageCreate, ({ log }, message) => {
+export default event(Events.MessageCreate, ({ log, keys }, message) => {
     log(`Command Received: \"${message.content}\' from ${message.author.tag}`)
+
+    const tokens = JSON.parse(keys)
 
     // check channelId
     if (message.channelId != '1197245823759687761') {

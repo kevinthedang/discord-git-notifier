@@ -5,6 +5,7 @@ import Events from './events/index.js'
 
 // import keys/tokens
 import Keys from './keys.js'
+import { log } from 'console'
 
 const client = new Client({
     intents: [
@@ -15,8 +16,12 @@ const client = new Client({
     ]
 })
 
-registerEvents(client, Events)
-registerOctokit(Keys.octoToken)
+// Setup octokit
+const octokit = await registerOctokit(Keys.octoToken)
+
+// Setup bot commands and pass references
+registerEvents(client, Events, JSON.stringify(Keys))
+log(`[Event: setup] Events have been registered.`)
 
 // Try to log in the client bot
 client.login(Keys.clientToken)
