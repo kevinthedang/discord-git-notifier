@@ -20,7 +20,7 @@ const client = new Client({
 const octokit = await registerOctokit(Keys.octoToken)
 
 // Setup bot commands and pass references
-registerEvents(client, Events, JSON.stringify(Keys))
+registerEvents(client, Events, JSON.stringify(Keys), octokit)
 log(`[Event: setup] Events have been registered.`)
 
 // Try to log in the client bot

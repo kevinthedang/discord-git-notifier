@@ -1,4 +1,5 @@
 import type { ClientEvents, Awaitable, Client } from "discord.js"
+import { Octokit } from "octokit"
 
 // Export events through here to reduce imports
 export { Events } from 'discord.js'
@@ -11,6 +12,7 @@ export interface EventProps {
     client: Client
     log: LogMethod
     keys: string
+    octo: Octokit
 }
 
 export type EventCallback<T extends EventKeys> = (
@@ -35,7 +37,8 @@ export function event<T extends EventKeys>(
 export function registerEvents(
     client: Client, 
     events: Event[],
-    keys: string 
+    keys: string,
+    octo: Octokit
 ): void {
     for (const { key, callback } of events) {
         client.on(key, (...args) => {
@@ -44,7 +47,7 @@ export function registerEvents(
 
             // Handle errors, callbacks, and logs
             try {
-                callback({ client, log, keys }, ...args)
+                callback({ client, log, keys, octo }, ...args)
             } catch (error) {
                 log('[Uncaught Error]', error)
             }

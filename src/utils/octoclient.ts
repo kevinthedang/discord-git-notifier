@@ -4,7 +4,10 @@ export async function registerOctokit(
     token: string
 ): Promise<Octokit> {
     // create octokit instance
-    const octokit = new Octokit({ auth: token })
+    const octokit = new Octokit({
+        timeZone: 'America/Los_Angeles',
+        auth: token 
+    })
 
     // testing login of github user
     const {

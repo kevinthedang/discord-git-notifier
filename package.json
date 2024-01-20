@@ -1,6 +1,6 @@
 {
     "name": "discord-git-notifier",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "description": "Discord Bot that notifies changes on GitHub",
     "main": "dist/index.js",
     "exports": "./dist/index.js",
