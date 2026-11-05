@@ -1,6 +1,7 @@
 import {
     ApplicationCommandOptionType,
     ApplicationCommandType,
+    MessageFlags,
     type ChatInputCommandInteraction,
     type Client,
     type GuildTextBasedChannel
@@ -32,7 +33,7 @@ export const Commits: SlashCommand = {
         if (!interaction.inGuild() || !interaction.guildId) {
             await interaction.reply({
                 content: "This command can only be used in a server.",
-                ephemeral: true
+                flags: MessageFlags.Ephemeral
             })
             return
         }
@@ -44,12 +45,12 @@ export const Commits: SlashCommand = {
         if (!notificationChannelId) {
             await interaction.reply({
                 content: "No notification channel is configured. Use `/set-notification-channel` first.",
-                ephemeral: true
+                flags: MessageFlags.Ephemeral
             })
             return
         }
 
-        await interaction.deferReply({ ephemeral: true })
+        await interaction.deferReply({ flags: MessageFlags.Ephemeral })
 
         try {
             const response = await getOctokit().request("GET /repos/{owner}/{repo}/commits", {

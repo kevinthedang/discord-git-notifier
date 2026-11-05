@@ -1,6 +1,7 @@
 import {
     ApplicationCommandOptionType,
     ApplicationCommandType,
+    MessageFlags,
     PermissionFlagsBits,
     type ChatInputCommandInteraction,
     type Client
@@ -30,7 +31,10 @@ export const Listen: SlashCommand = {
     ],
     run: async (_client: Client, interaction: ChatInputCommandInteraction) => {
         if (!interaction.inGuild() || !interaction.guildId) {
-            await interaction.reply({ content: "This command can only be used in a server.", ephemeral: true })
+            await interaction.reply({
+                content: "This command can only be used in a server.",
+                flags: MessageFlags.Ephemeral
+            })
             return
         }
 
@@ -43,7 +47,7 @@ export const Listen: SlashCommand = {
             content: added
                 ? `Now listening for pushes to **${repository}**.`
                 : `This server is already listening for **${repository}**.`,
-            ephemeral: true
+            flags: MessageFlags.Ephemeral
         })
     }
 }
@@ -79,7 +83,7 @@ export const Unlisten: SlashCommand = {
             content: removed
                 ? `Stopped listening for **${repository}**.`
                 : `This server was not listening for **${repository}**.`,
-            ephemeral: true
+            flags: MessageFlags.Ephemeral
         })
     }
 }
@@ -91,7 +95,10 @@ export const ListListeners: SlashCommand = {
     dmPermission: false,
     run: async (_client: Client, interaction: ChatInputCommandInteraction) => {
         if (!interaction.inGuild() || !interaction.guildId) {
-            await interaction.reply({ content: "This command can only be used in a server.", ephemeral: true })
+            await interaction.reply({
+                content: "This command can only be used in a server.",
+                flags: MessageFlags.Ephemeral
+            })
             return
         }
 
@@ -100,7 +107,7 @@ export const ListListeners: SlashCommand = {
             content: repositories.length
                 ? `Listening for:\n${repositories.map((repository) => `• \`${repository}\``).join("\n")}`
                 : "This server is not listening for any GitHub repositories.",
-            ephemeral: true
+            flags: MessageFlags.Ephemeral
         })
     }
 }

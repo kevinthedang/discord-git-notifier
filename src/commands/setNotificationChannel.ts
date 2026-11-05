@@ -1,5 +1,6 @@
 import {
     ApplicationCommandType,
+    MessageFlags,
     PermissionFlagsBits,
     type ChatInputCommandInteraction,
     type Client
@@ -17,7 +18,7 @@ export const SetNotificationChannel: SlashCommand = {
         if (!interaction.inGuild() || !interaction.guildId) {
             await interaction.reply({
                 content: "This command can only be used in a server.",
-                ephemeral: true
+                flags: MessageFlags.Ephemeral
             })
             return
         }
@@ -25,7 +26,7 @@ export const SetNotificationChannel: SlashCommand = {
         if (!interaction.memberPermissions?.has(PermissionFlagsBits.ManageChannels)) {
             await interaction.reply({
                 content: "You need the Manage Channels permission to change the notification channel.",
-                ephemeral: true
+                flags: MessageFlags.Ephemeral
             })
             return
         }
@@ -33,7 +34,7 @@ export const SetNotificationChannel: SlashCommand = {
         await setNotificationChannelId(interaction.guildId, interaction.channelId)
         await interaction.reply({
             content: `<#${interaction.channelId}> is now the notification channel.`,
-            ephemeral: true
+            flags: MessageFlags.Ephemeral
         })
     }
 }
