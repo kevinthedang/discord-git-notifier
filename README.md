@@ -1,5 +1,6 @@
 <div align="center">
-    <h1>Git Notifier Discord Bot</h1>
+    <h1>Git Notifier Bot</h1>
+    <h3>GitHub Notification Discord Bot for Developers</h3>
     <p><a href="https://mit-license.org/"><img alt="License" src="https://img.shields.io/badge/License-MIT-darkgreen.svg" /></a>
     <a href="https://github.com/kevinthedang/discord-git-notifier/releases/latest"> <img alt="Release" src="https://img.shields.io/github/v/release/kevinthedang/discord-git-notifier?logo=github" /></a></p>
 </div>
