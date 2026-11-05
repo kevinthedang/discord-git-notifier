@@ -1,6 +1,14 @@
-import { event, Events } from '../utils/index.js'
+import commands from '../commands/index.js'
+import { event, Events, registerCommands } from '../utils/index.js'
 
-// Log when bot successfully logs in
-export default event(Events.ClientReady, ({ log }, client) => {
-    return log(`Logged in as ${client.user.username}.`)
+// Register slash commands for every connected guild
+export default event(Events.ClientReady, async ({ log }, client) => {
+    log(`Logged in as ${client.user.username}.`)
+
+    try {
+        await registerCommands(client, commands)
+        log('Slash commands registered.')
+    } catch (error) {
+        log('Failed to register slash commands.', error)
+    }
 })

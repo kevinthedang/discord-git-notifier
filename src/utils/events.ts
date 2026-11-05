@@ -41,13 +41,13 @@ export function registerEvents(
     octo: Octokit
 ): void {
     for (const { key, callback } of events) {
-        client.on(key, (...args) => {
+        client.on(key, async (...args) => {
             // Create a new log method for this event
             const log = console.log.bind(console, `[Event: ${key}]`)
 
             // Handle errors, callbacks, and logs
             try {
-                callback({ client, log, keys, octo }, ...args)
+                await callback({ client, log, keys, octo }, ...args)
             } catch (error) {
                 log('[Uncaught Error]', error)
             }

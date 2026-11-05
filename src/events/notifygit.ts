@@ -1,9 +1,17 @@
 import { event, Events } from "../utils/events.js"
+import { getNotificationChannelId } from "../utils/notificationChannels.js"
 
 export default event(Events.MessageCreate, async ({ log, octo }, message) => {
-    // check channelId
-    if (message.channelId != '1197245823759687761') {
-        log('Unauthorized Channel input, aborting...')
+    if (!message.guildId) return
+
+    const notificationChannelId = await getNotificationChannelId(message.guildId)
+    if (!notificationChannelId) {
+        log('No notification channel configured for this server.')
+        return
+    }
+
+    if (message.channelId !== notificationChannelId) {
+        log(`Unauthorized channel input (${message.channelId}), aborting...`)
         return
     }
 
@@ -30,7 +38,7 @@ export default event(Events.MessageCreate, async ({ log, octo }, message) => {
         //     message.reply(`Commit ${repo.commit.message}`)
         // })
     } catch(error) {
-        log(error)
-        message.reply(`I am having trouble finding the repository \`${message.content}\` as owner \`${message.author.tag}\`\n\n I advise validating the repository name, ensure \`.git\` is not included with the name.`)
+        log('[Uncaught Error]', error)
+        await message.reply(`I am having trouble finding the repository \`${message.content}\` as owner \`${message.author.tag}\`\n\n I advise validating the repository name, ensure \`.git\` is not included with the name.`)
     }
 })

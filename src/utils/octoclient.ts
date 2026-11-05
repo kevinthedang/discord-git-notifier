@@ -1,10 +1,12 @@
 import { Octokit } from "octokit"
 
+let octokit: Octokit | undefined
+
 export async function registerOctokit(
     token: string
 ): Promise<Octokit> {
     // create octokit instance
-    const octokit = new Octokit({
+    octokit = new Octokit({
         timeZone: 'America/Los_Angeles',
         auth: token 
     })
@@ -16,5 +18,11 @@ export async function registerOctokit(
 
     console.log(`[Event: octokit setup] Signed in as ${login}`)
 
+    return octokit
+}
+
+export function getOctokit(): Octokit {
+    if (!octokit)
+        throw new Error("Octokit has not been initialized.")
     return octokit
 }

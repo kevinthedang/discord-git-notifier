@@ -6,4 +6,5 @@ dist/
 
 # tokens/creds
 .dev.env
+.notification-channels.json
 .env
