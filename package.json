@@ -1,6 +1,6 @@
 {
     "name": "discord-git-notifier",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "description": "Discord Bot that notifies changes on GitHub",
     "main": "dist/index.js",
     "exports": "./dist/index.js",
@@ -22,7 +22,7 @@
         "octokit": "^3.1.2"
     },
     "devDependencies": {
-        "@types/node": "^20.10.5",
+        "@types/node": "^24.0.0",
         "nodemon": "^3.0.2",
         "ts-node": "^10.9.2",
         "tsx": "^4.7.0",
@@ -30,6 +30,9 @@
     },
     "type": "module",
     "engines": {
-        "node": ">=16.0.0"
+        "node": ">=24.0.0"
+    },
+    "allowScripts": {
+        "esbuild@0.28.2": true
     }
 }

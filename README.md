@@ -1,4 +1,9 @@
-# Git Notifier Discord Bot [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC_BY--NC_4.0-darkgreen.svg)](https://creativecommons.org/licenses/by-nc/4.0/) [![Release Badge](https://img.shields.io/github/v/release/kevinthedang/discord-git-notifier?logo=github)](https://github.com/kevinthedang/discord-git-notifier/releases/latest)
+<div align="center">
+    <h1>Git Notifier Discord Bot</h1>
+    <p><a href="https://creativecommons.org/licenses/by-nc/4.0/"><img alt="License" src="https://img.shields.io/badge/License-CC_BY--NC_4.0-darkgreen.svg" /></a>
+    <a href="https://github.com/kevinthedang/discord-git-notifier/releases/latest"> <img alt="Release" src="https://img.shields.io/github/v/release/kevinthedang/discord-git-notifier?logo=github" /></a></p>
+</div>
+
 Sometimes it's annoying to go on GitHub or ask my friends if they made changes to the codebase. So, I want to create a bot that will notify me if changes are made to a repository so I don't need to ask or check. It would also be cool if the bot displays the diff into a codeblock on discord to see what was added!
 
 ## Ideas
@@ -27,7 +32,7 @@ Something to consider in terms of accounts and running scripts!!!
 
 ## Resources
 * [NodeJS](https://nodejs.org/en/download/)
-    * This project will use `v18.18.2` so that nodemon will work properly, `v18.19.0` and up does not work for some reason.
+    * This project uses Node.js 24 (Krypton), the active LTS line.
     * Consider using [nvm](https://github.com/nvm-sh/nvm/blob/master/README.md#about) for multiple node versions.
 * [Discord Developer Portal](https://discord.com/developers/docs/intro)
     * [Discord.js Docs](https://discord.js.org/docs/packages/discord.js/main)
