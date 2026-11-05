@@ -39,6 +39,5 @@ export default event(Events.MessageCreate, async ({ log, octo }, message) => {
         // })
     } catch(error) {
         log('[Uncaught Error]', error)
-        await message.reply(`I am having trouble finding the repository \`${message.content}\` as owner \`${message.author.tag}\`\n\n I advise validating the repository name, ensure \`.git\` is not included with the name.`)
     }
 })
