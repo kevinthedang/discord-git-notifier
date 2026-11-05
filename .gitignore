@@ -7,4 +7,5 @@ dist/
 # tokens/creds
 .dev.env
 .notification-channels.json
+.github-listeners.json
 .env
