@@ -1,6 +1,6 @@
 <div align="center">
     <h1>Git Notifier Discord Bot</h1>
-    <p><a href="https://creativecommons.org/licenses/by-nc/4.0/"><img alt="License" src="https://img.shields.io/badge/License-CC_BY--NC_4.0-darkgreen.svg" /></a>
+    <p><a href="https://mit-license.org/"><img alt="License" src="https://img.shields.io/badge/License-MIT-darkgreen.svg" /></a>
     <a href="https://github.com/kevinthedang/discord-git-notifier/releases/latest"> <img alt="Release" src="https://img.shields.io/github/v/release/kevinthedang/discord-git-notifier?logo=github" /></a></p>
 </div>
 
@@ -47,4 +47,4 @@ Something to consider in terms of accounts and running scripts!!!
 
 I found the following to be helpful with current ideas: [gitbot](https://github.com/statch/gitbot)
 
-[discord-git-notifier](https://github.com/kevinthedang/discord-git-notifier) © 2023 by [Kevin Dang](https://github.com/kevinthedang) is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1)
+[discord-git-notifier](https://github.com/kevinthedang/discord-git-notifier) © 2023 by [Kevin Dang](https://github.com/kevinthedang) is licensed under [MIT](https://mit-license.org/)
